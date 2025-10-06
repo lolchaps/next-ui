@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import { SidebarTrigger } from "@/components/ui/sidebar"
-import { ModeToggle } from "@/components/mode-toggle";
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import { SidebarTrigger } from '@/components/ui/sidebar';
+import { ModeToggle } from '@/components/mode-toggle';
 
 export function SiteHeader() {
   return (
@@ -18,5 +18,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }
