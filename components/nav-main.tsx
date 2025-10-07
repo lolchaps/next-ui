@@ -4,6 +4,7 @@ import { IconCirclePlusFilled, IconMail, type Icon } from '@tabler/icons-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { isActivePath } from '@/lib/navigation';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -48,7 +49,7 @@ export function NavMain({
         </SidebarMenu>
         <SidebarMenu>
           {items.map((item) => {
-            const isActive = pathname === item.url;
+            const isActive = isActivePath(pathname, item.url);
 
             return (
               <SidebarMenuItem key={item.title}>
