@@ -1,10 +1,14 @@
 import { SectionCards } from '@/components/section-cards';
 import { ChartAreaInteractive } from '@/components/chart-area-interactive';
 import { DataTable } from '@/components/data-table';
+import { fetchUser } from '@/lib/auth';
 
 import data from '@/app/dashboard/data.json';
 
 export default async function Page() {
+    const result = await fetchUser();
+
+    console.log(result.data)
   return (
     <div className="flex flex-1 flex-col">
       <div className="@container/main flex flex-1 flex-col gap-2">
